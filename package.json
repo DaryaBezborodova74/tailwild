@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "localPug": "pug -w example.pug"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "pug-cli": "^1.0.0-alpha6",
     "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "pug": "^3.0.3"
   }
 }

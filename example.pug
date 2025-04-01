@@ -1,0 +1,22 @@
+html(lang="ru")
+    head 
+        meta(charset="utf-8")
+        title pug
+        style 
+            include css/output.css
+    body(class="h-screen")
+        div(class="flex flex-col h-screen")
+            header(class="bg-blue-400 p-6")
+                h1(class="text-white-100 text-3xl font-bold") Интернет магазин
+            main(class="grow")
+                div(class="grid grid-cols-6 gap-6")
+                    - var cards = [{title:"товар 1",price:5000,path_img:"img/8809954228476.jpg",sale:true},{title:"товар 2",price:3000,path_img:"img/8809954228476.jpg",sale:false}];
+                    each card in cards 
+                        div(class="p-2")
+                            img(src=card.path_img, alt="")
+                            if card.sale == true 
+                                p(class="text-red-500") скидка!
+                            p=card.title 
+                            p=card.price
+            footer(class="bg-blue-400 p-6")
+                p &copy; Название компании, 2025
